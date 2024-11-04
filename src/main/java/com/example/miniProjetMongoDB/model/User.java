@@ -19,7 +19,7 @@ public class User {
     private String nom;
     private String prenom;
     private String password;
-    private List<String> amis;
+    private List<User> amis;
 
 
 }

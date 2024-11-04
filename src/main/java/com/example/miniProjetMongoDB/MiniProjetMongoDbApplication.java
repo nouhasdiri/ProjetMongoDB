@@ -23,10 +23,10 @@ public class MiniProjetMongoDbApplication {
 		// Ajout des données statiques en une seule ligne
 		// Ajout des données statiques pour les utilisateurs uniquement
 		List<User> utilisateurs = Arrays.asList(
-				new User("user1", "Alice", "Dupont", "123nouha", new ArrayList<>(Arrays.asList("user2"))),
-				new User("user2", "Bob", "Martin", "123nouha", new ArrayList<>(Arrays.asList("user1"))),
-				new User("user3", "Charlie", "Dupuis", "123nouha", new ArrayList<>(Arrays.asList("user4"))),
-				new User("user4", "Diana", "Lefevre", "123nouha", new ArrayList<>(Arrays.asList("user3")))
+				new User("user1", "nouhaila", "Dupont", "123nouha", new ArrayList<>()),
+				new User("user2", "Khalid", "Martin", "123nouha", new ArrayList<>()),
+				new User("user3", "Charlie", "Dupuis", "123nouha", new ArrayList<>()),
+				new User("user4", "Diana", "Lefevre", "123nouha", new ArrayList<>())
 		);
 		// Sauvegarde de chaque utilisateur
 		for (User utilisateur : utilisateurs) {

@@ -14,7 +14,7 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Document(collation = "news")
+@Document(collection = "news")
 public class News {
     @Id
     private String id;
