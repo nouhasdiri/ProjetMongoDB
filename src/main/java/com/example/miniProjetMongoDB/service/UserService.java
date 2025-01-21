@@ -10,6 +10,10 @@ import java.util.List;
 
 @Service
 public class UserService {
+
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+
     @Autowired
     private UserRepo userRepo;
 
@@ -20,6 +24,7 @@ public class UserService {
         return userRepo.findById(login).orElse(null);
     }
     public User addUser(User user) {
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
         return userRepo.save(user);
     }
     public void deleteUser(User user) {

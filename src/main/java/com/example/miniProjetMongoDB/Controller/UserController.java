@@ -37,5 +37,22 @@ public class UserController {
         userService.addUser(user);
         return "redirect:/users";
     }
+    @GetMapping("/login")
+    public String showLoginForm() {
+        return "login"; // Retourne le fichier login.html pour le formulaire de connexion
+    }
+
+    // Redirection après la connexion réussie
+    @GetMapping("/loginSuccess")
+    public String loginSuccess() {
+        return "redirect:/users"; // Redirige vers /users en cas de connexion réussie
+    }
+
+    // Redirection en cas d'échec de connexion
+    @GetMapping("/loginFailure")
+    public String loginFailure(Model model) {
+        model.addAttribute("error", "Invalid username or password");
+        return "login"; // Reste sur la page de connexion avec un message d'erreur
+    }
 
 }
